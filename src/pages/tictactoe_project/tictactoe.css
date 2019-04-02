@@ -1,0 +1,125 @@
+.TicTacToe {
+  background-image: url('https://i.pinimg.com/originals/14/bf/b7/14bfb731b9dd3bae441cfcd22e4e2f61.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 112%;
+}
+
+.Permanent {
+  font-family: Permanent Marker, cursive!important;
+}
+
+.Header {
+  font-size: 10vh;
+  display: flex;
+  justify-content: center;
+  background-position: ;
+}
+
+.ScoreBoard {
+  font-size: 20px;
+  color: #990000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Icon {
+  width: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.P1Icon, .P2Icon {
+  border-bottom: 5px solid black;
+}
+
+.Icon1Cont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.Icon2Cont {
+  margin-left: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+table td, table th {
+    border: 5px solid black;
+}
+
+#Player1 {
+  padding: 0px 20px 0px 0px;
+}
+
+#Player2 {
+  padding: 0px 0px 0px 20px;
+}
+
+.FirstPlayer {
+  color: #990000;
+  height: 20px;
+  margin-bottom: 10px
+}
+
+.Game {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Squares {
+  width: 90px;
+  height: 90px;
+}
+
+.Board {
+  display: grid;
+  grid-template-columns: 90px 90px 90px;
+  grid-template-rows: 90px 90px 90px;
+  user-select: none;
+  line-height: 90px;
+  text-align: center;
+  background-image: url("./imgs/tic-tac-toe.png");
+  background-repeat: no-repeat;
+  background-size: 270px 280px;
+  font-size: 70px;
+  color: #990000;
+}
+
+
+.Reset {
+  width: 180px;
+  height: 40px;
+  font-size: 20px!important;
+  display: flex;
+}
+.ResetButtons {
+  margin-top: 15px;
+  font-size: 25px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.ResetStatement {
+  margin-bottom: 0px;
+}

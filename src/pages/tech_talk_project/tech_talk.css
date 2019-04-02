@@ -1,0 +1,165 @@
+.TechTalk > h1 {
+  font-weight: bolder;
+}
+
+.TechTalk > div {
+  text-align: center;
+}
+
+/* Grid Page */
+
+.displayGrid {
+  border: 2px solid black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 20vw);
+  grid-template-rows: repeat(2, 40vh);
+  grid-gap: 10px;
+  background-color: #2196F3;
+}
+
+.displayGrid > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 50px;
+  border: 2px solid black;
+  height: 30vh;
+}
+
+@media screen and (max-width: 768px)  {
+	.displayGrid {
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: repeat(4, 40vh);
+	}
+  h5{color: red}
+}
+
+/* Flex Page */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: #2196F3;
+}
+
+.flex-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 40vh;
+  margin: 10vh 5vw 10vh 5vw;
+}
+
+.flex1{
+  width: 96.5vw;
+  margin: 0;
+  padding: 0;
+}
+
+.flex2 {
+  width: 30vw;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2196F3;
+}
+
+.flex-container2 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 25vh;
+}
+
+.flex3 {
+  height: 60vh!important;
+  flex: 30%;
+  margin-top: 10vh;
+  padding: 0;
+}
+
+.flex4 {
+  height: 60vh!important;
+  flex: 50%;
+  margin-top: 10vh;
+  padding: 0;
+  background-color: black!important;
+}
+
+.flex5{
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 700px)  {
+	.flex-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+	}
+  .flex1{width: 90vw;}
+  .flex2{width: 60vw;}
+  h5{color: red}
+  .flex-container2 {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .flex4{margin-top: 0;}
+}
+
+/* Background Page */
+
+.backgroundFixed {
+  height: 500px;
+  width: 1020px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backgroundFixed> div {
+  font-size: 150px;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+
+.backgroundCover, .backgroundGridCover > div {
+  font-size: calc(5.25em + (50 - 5.25) * ((100vw - 300px) / (1600 - 300)));
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  -webkit-text-stroke: 2px black;
+
+}
+
+.backgroundCover {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.backgroundGridContainer {
+  display: grid;
+  grid-template-columns: 75vw 25vw;
+}
+
+.backgroundGridCover {
+  height: 80vh;
+  background-size: 100vw;
+  background-position-X: -20vw;
+  background-repeat: no-repeat;
+}
+
+.mobileBackground {
+  background-image: url(./imgs/fox.jpg);
+}
+
+@media screen and (max-width: 900px)  {
+	.mobileBackground {
+    background-image: url(./imgs/phonewallpaper.png);
+  }
+}

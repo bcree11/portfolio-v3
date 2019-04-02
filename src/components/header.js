@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = theme => ({
   root: {
     height: '60vh',
-    backgroundImage: `url("./images/beachSunset.jpg")`,
+    backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./images/beachSunset.jpg")`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPositionY: '85%',
@@ -17,21 +17,33 @@ const styles = theme => ({
     lineHeight: '1',
   },
   title: {
-    color: 'white',
     fontSize: 'calc(4em + (50 - 4) * ((100vw - 300px) / (1600 - 300)))',
-    fontWeight: 'bold',
     // transform: 'scale(1,2)',
     marginBottom: '2em',
+  },
+  links: {
+    color: 'white',
+    fontSize: '2em',
+    fontWeight: 'bold',
   }
 })
 
-const Header = ({ classes }) => {
-  return(
+const Header = ({ classes }) => (
     <div className={classes.root}>
-      <span className={classes.title}>BRANDON CREE</span>
+      <div className={classes.links}>
+        <span className={classes.title}>BRANDON CREE</span>
+        <h4>Junior Web Developer</h4>
+        <div style={{marginBottom: '1em'}}>
+          <a style={{marginRight: '1rem'}} href="https://github.com/bcree11" target="_blank">
+            <i className="zmdi zmdi-github-box"></i>
+          </a>{' '}
+          <a href="https://www.linkedin.com/in/bcree/" target="_blank">
+            <i className="zmdi zmdi-linkedin-box"></i>
+          </a>
+        </div>
+      </div>
     </div>
   )
-}
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired,
