@@ -34,30 +34,6 @@ const styles = theme => ({
   }
 })
 
-const SkillsArrObject = (props) => (
-  <div className={props.skillsBlock}>
-    {languages.map((languages, index) => (
-      <div key={languages.id} className={props.skillsObject}>
-        <div className={props.skillsObject}>
-          <h6>{'{ '}name:</h6>
-        </div>
-        <div className={props.skillsObject}>
-        <h5>{languages.name}</h5>
-      </div>
-        <div className={props.skillsObject}>
-          <h6>logo:</h6>
-        </div>
-        <div className={props.skillsObject}>
-          <img className={props.skillsLogos} src={languages.logo} alt={languages.name}/>
-        </div>
-        <div className={props.skillsObject}>
-          <h6>{' }'} ,</h6>
-        </div>
-      </div>
-    ))}
-  </div>
-)
-
 const SkillsTable = (props) => (
   <table className={"striped"}>
     <tbody>
