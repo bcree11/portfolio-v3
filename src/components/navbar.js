@@ -1,18 +1,20 @@
 import React from 'react'
-import '../App.css';
+import { Link } from 'react-router-dom'
+import '../App.css'
 import 'materialize-css'
 import 'materialize-css/dist/css/materialize.min.css'
 
 export default (props) => (
   <div className='navbar-fixed'>
     <nav>
-      <div className="nav-wrapper light-blue darken-1">
-        <a href="#" className="brand-logo center">{props.title}</a>
+      <div className="nav-wrapper black">
+        <Link to="/" className="brand-logo center">{props.title}</Link>
         <ul id="nav-mobile" className="left hide-on-med-and-down">
-          <li><a href="#aboutMe">About Me</a></li>
-          <li><a href="badges.html">Skills</a></li>
-          <li><a href="collapsible.html">Portfolio</a></li>
-          <li><a href="collapsible.html">Contact</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="#aboutMe">About Me</Link></li>
+          <li><Link to="badges.html">Skills</Link></li>
+          <li><Link to="collapsible.html">Portfolio</Link></li>
+          <li><Link to="collapsible.html">Contact</Link></li>
         </ul>
       </div>
     </nav>

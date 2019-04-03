@@ -11,6 +11,9 @@ span, a, h1, h2, h3, h4, h5, h6 {
  text-transform: uppercase;
 }
 
+nav > div > .brand-logo {
+  font-size: 1.75rem;
+}
 /* button:focus {
   background-color: inherit;
 } */

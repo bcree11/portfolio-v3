@@ -29,8 +29,9 @@ class CardGrid extends React.Component{
 
   SunChange = () => {
     let {sunAndMoon, lightCounter} = this.state
-    const {lightSwitch}=this.props
+    const {lightSwitch, lightTimer}=this.props
     lightSwitch()
+    lightTimer()
     sunAndMoon = lightCounter%2 !== 0 ? "./images/Moon.png" : "./images/Sun.png"
     this.setState({sunAndMoon: sunAndMoon, lightCounter: lightCounter+1})
   }
@@ -54,21 +55,33 @@ class CardGrid extends React.Component{
         <PortCard
           title='Tic Tac Toe'
           image='../images/tictactoe.png'
-          link='/tictactoe'
+          link='/tic-tac-toe'
           linkText='Play'
         />
         <PortCard
-          title='Tech Talk: Responsive Design'
+          title='Tech Talk'
           image='../images/responsive.png'
           imageSize='contain'
-          link='/techtalk'
+          link='/tech-talk'
           linkText='Link'
         />
         <PortCard
           title='Portfolio'
           image='../images/BrandonCree.png'
-          link='https://github.com/bcree11/PortfolioWebsite'
-          linkText='Current Version'
+          link='https://github.com/bcree11/portfolio-v3'
+          linkText='Version 3 Github'
+        />
+        <PortCard
+          title='Batter Up!'
+          image='../images/BatterUp.png'
+          link='https://devpost.com/software/batter-up-yudmpt'
+          linkText='Devpost'
+        />
+        <PortCard
+          title='ToolShare'
+          image=''
+          link='https://devpost.com/software/batter-up-yudmpt'
+          linkText='Link'
         />
       </React.Fragment>
     )

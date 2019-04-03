@@ -3,7 +3,7 @@ import 'materialize-css'
 import 'materialize-css/dist/css/materialize.min.css'
 
 export default (props) => (
-  <footer className="page-footer flow-text light-blue darken-1" style={footerStyle}>
+  <footer className="page-footer flow-text black" style={footerStyle}>
     <div className="container">
       <div className="row">
         <div className="col s12">

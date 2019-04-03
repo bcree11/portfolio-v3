@@ -29,7 +29,7 @@ const styles = theme => ({
 })
 
 const Header = ({ classes }) => (
-    <div className={classes.root}>
+    <header className={classes.root}>
       <div className={classes.links}>
         <span className={classes.title}>BRANDON CREE</span>
         <h4>Junior Web Developer</h4>
@@ -42,7 +42,7 @@ const Header = ({ classes }) => (
           </a>
         </div>
       </div>
-    </div>
+    </header>
   )
 
 Header.propTypes = {

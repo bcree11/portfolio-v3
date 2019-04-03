@@ -30,11 +30,11 @@ class Board extends Component {
     count = count > 0 ? count - 1 : 0
     if(spaces[winner]==="🎁" || spaces[bomb]==="💩"){
       return
-    } else if(winner == id){
+    } else if(winner === id){
         spaces[id]="🎁"
         count = "You Found The Present!"
         message = ``
-      } else if (bomb == id){
+      } else if (bomb === id){
         spaces[id]='💩'
         count = "You Got Caught!"
         message = ``

@@ -1,0 +1,78 @@
+export const languages = [
+                { id: 1,
+                  name: "\"Javascript\",",
+                  logo: "https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png",
+                },
+                { id: 2,
+                  name: "\"Ruby\",",
+                  logo: "https://seeklogo.com/images/R/ruby-logo-087AF79367-seeklogo.com.jpg",
+                },
+                { id: 3,
+                  name: "\"CSS\",",
+                  logo: "https://seeklogo.com/images/C/css3-logo-8724075274-seeklogo.com.png",
+                },
+                { id: 4,
+                  name: "\"HTML\",",
+                  logo: "https://seeklogo.com/images/H/html5-logo-EF92D240D7-seeklogo.com.png",
+                },
+              ]
+
+export const databases = [
+          { id: 1,
+            name: "\"PostgreSQL\",",
+            logo: "https://seeklogo.com/images/P/postqresql-logo-AD0E066492-seeklogo.com.png",
+          },
+          { id: 2,
+            name: "\"MySQL\",",
+            logo: "https://seeklogo.com/images/M/mysql-logo-B047FB7790-seeklogo.com.png",
+          },
+        ]
+
+export const frameworks = [
+            { id: 1,
+              name: "\"React\",",
+              logo: "https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png",
+            },
+            { id: 2,
+              name: "\"Rails\",",
+              logo: "https://dcresource.biz/wp-content/uploads/2016/03/ruby_on_rails.png",
+            },
+            { id: 3,
+              name: "\"Material UI\",",
+              logo: "https://seeklogo.com/images/M/material-ui-logo-527EE4ADD9-seeklogo.com.png",
+            },
+            { id: 4,
+              name: "\"Materialize\",",
+              logo: "https://seeklogo.com/images/M/materialize-logo-0FCAD8A6F8-seeklogo.com.png",
+            },
+            { id: 5,
+              name: "\"Bootstrap\",",
+              logo: "https://seeklogo.com/images/B/bootstrap-logo-3C30FB2A16-seeklogo.com.png",
+            },
+          ]
+
+export const otherSkills = [
+            { id: 1,
+              name: "\"Github\",",
+              logo: "https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png",
+            },
+            { id: 2,
+              name: "\"Photoshop\",",
+              logo: "https://seeklogo.com/images/A/adobe-photoshop-cc-logo-CBD0AAA3A7-seeklogo.com.png",
+            },
+            { id: 3,
+              name: "\"GIMP\",",
+              logo: "https://seeklogo.com/images/G/gimp-logo-4D0E1F6FF5-seeklogo.com.jpg",
+            },
+          ]
+
+export const testing = [
+          { id: 1,
+            name: "\"Jest\",",
+            logo: "https://seeklogo.com/images/J/jest-logo-F9901EBBF7-seeklogo.com.png",
+          },
+          { id: 2,
+            name: "\"RSPEC\",",
+            logo: "http://rspec.info/images/logo_ogp.png",
+          },
+        ]
