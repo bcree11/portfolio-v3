@@ -1,6 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles'
 
 import PortCard from './card'
+
+const styles = theme => ({
+  root: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 20rem)',
+    justifyContent: 'center',
+    gridGap: '3rem'
+  },
+})
 
 class CardGrid extends React.Component{
   state = {
@@ -37,11 +48,10 @@ class CardGrid extends React.Component{
   }
 
   render(){
-    let {colorCounter, colors, sunAndMoon} = this.state
-    console.log('color', colors);
-    console.log('count', colorCounter);
+    const { classes } = this.props
+    const { colorCounter, colors, sunAndMoon } = this.state
     return(
-      <React.Fragment>
+      <section className={classes.root}>
         <PortCard
           title='Color Box'
           colors={colors[colorCounter].code}
@@ -51,6 +61,12 @@ class CardGrid extends React.Component{
           title='Light Switch'
           image={sunAndMoon}
           onChange={this.SunChange}
+        />
+        <PortCard
+          title='Treasure Hunt'
+          image='../images/hunt.png'
+          link='/christmas-present-hunt'
+          linkText='Play'
         />
         <PortCard
           title='Tic Tac Toe'
@@ -83,9 +99,17 @@ class CardGrid extends React.Component{
           link='https://devpost.com/software/batter-up-yudmpt'
           linkText='Link'
         />
-      </React.Fragment>
+        <PortCard
+          title='Discrete Chill'
+          image=''
+        />
+      </section>
     )
   }
 }
 
-export default CardGrid
+CardGrid.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(CardGrid)

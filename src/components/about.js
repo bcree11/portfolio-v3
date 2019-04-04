@@ -12,7 +12,6 @@ const styles = theme => ({
   paper: {
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
-    color: theme.palette.text.secondary,
   },
   card: {
     width: 300,
@@ -28,7 +27,7 @@ const AboutMe = (props) => {
   return(
     <section style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <div >
-        <Card className={classes.card} elevation={12}>
+        <Card className={classes.card} elevation={12} square={true}>
           <CardMedia
             style={{backgroundColor: props.colors, backgroundSize: props.imageSize}}
             className={classes.media}
@@ -38,7 +37,7 @@ const AboutMe = (props) => {
         </Card>
       </div>
       <div>
-        <Paper className={classes.paper} elevation={12}>
+        <Paper className={classes.paper} elevation={6} square={true}>
           <h3>Who Am I?</h3>
           <hr/>
           <p className="text flow-text">

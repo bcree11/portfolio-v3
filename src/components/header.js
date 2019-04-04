@@ -22,11 +22,12 @@ const styles = theme => ({
     marginBottom: '2em',
   },
   links: {
-    color: 'white',
+    color: '#ffae1a',
     fontSize: '2em',
     fontWeight: 'bold',
   }
 })
+//color: #ffae1a
 
 const Header = ({ classes }) => (
     <header className={classes.root}>
@@ -34,10 +35,10 @@ const Header = ({ classes }) => (
         <span className={classes.title}>BRANDON CREE</span>
         <h4>Junior Web Developer</h4>
         <div style={{marginBottom: '1em'}}>
-          <a style={{marginRight: '1rem'}} href="https://github.com/bcree11" target="_blank">
+          <a style={{marginRight: '1rem'}} href="https://github.com/bcree11" target="_blank" rel="noopener noreferrer">
             <i className="zmdi zmdi-github-box"></i>
           </a>{' '}
-          <a href="https://www.linkedin.com/in/bcree/" target="_blank">
+          <a href="https://www.linkedin.com/in/bcree/" target="_blank" rel="noopener noreferrer">
             <i className="zmdi zmdi-linkedin-box"></i>
           </a>
         </div>

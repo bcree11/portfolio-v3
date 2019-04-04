@@ -5,8 +5,6 @@ import Paper from '@material-ui/core/Paper'
 import 'materialize-css'
 import 'materialize-css/dist/css/materialize.min.css'
 
-import { languages } from './store.js'
-
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -17,7 +15,7 @@ const styles = theme => ({
   paper: {
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    fontWeight: 'bold'
   },
   card: {
     width: 300,
@@ -35,41 +33,45 @@ const styles = theme => ({
 })
 
 const SkillsTable = (props) => (
-  <table className={"striped"}>
-    <tbody>
-    {languages.map((languages, index) => (
-      <tr key={languages.id} className={props.skillsObject}>
-        <td className={props.skillsTable}>
-          <h6>{'{ '}name:</h6>
-        </td>
-        <td className={props.skillsTable}>
-        <h5>{languages.name}</h5>
-      </td>
-        <td className={props.skillsTable}>
-          <h6>logo:</h6>
-        </td>
-        <td className={props.skillsTable}>
-          <img className={props.skillsLogos} src={languages.logo} alt={languages.name}/>
-        </td>
-        <td className={props.skillsTable}>
-          <h6>{' }'} ,</h6>
-        </td>
-      </tr>
+  <React.Fragment>
+    { props.skills &&
+        props.skills.map((skill, index) => (
+          <tr key={skill.id} className={props.skillsObject}>
+            <td className={props.skillsTable}>
+              <p>{'{ '}name:</p>
+            </td>
+            <td className={props.skillsTable}>
+              <h6>{skill.name}</h6>
+            </td>
+            <td className={props.skillsTable}>
+              <p>logo:</p>
+            </td>
+            <td className={`${props.skillsTable} right`}>
+              <img className={props.skillsLogos} src={skill.logo} alt={skill.name}/>
+            </td>
+            <td className={props.skillsTable}>
+              <p>{' }'} ,</p>
+            </td>
+          </tr>
     ))}
-    </tbody>
-  </table>
+  </React.Fragment>
 )
 
 const Skills = (props) => {
-  const { classes } = props
+  const { classes, skills, skillsTitle } = props
   return(
     <section className={classes.root}>
-      <Paper className={classes.paper} elevation={12}>
-        <h3 className={classes.title}>Languages ={' ['}</h3>
-        <SkillsTable
-          skillsLogos={classes.skillsLogos}
-          skillsTable={classes.table}
-        />
+      <Paper className={classes.paper} elevation={6} square={true}>
+        <h3 className={classes.title}>{skillsTitle} ={' ['}</h3>
+        <table className={"striped"}>
+          <tbody>
+            <SkillsTable
+              skillsLogos={classes.skillsLogos}
+              skillsTable={classes.table}
+              skills={skills}
+            />
+          </tbody>
+        </table>
         <h3 className={classes.title}>{ ']'}</h3>
       </Paper>
     </section>

@@ -55,10 +55,10 @@ class PortModal extends React.Component {
         >
           <div style={getModalStyle()} className={classes.paper}>
             <Typography variant="h6" id="modal-title">
-              Text in a modal
+              {this.props.title}Portfolio Title
             </Typography>
             <Typography variant="subtitle1" id="simple-modal-description">
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+              Put in collection of portfolio comments
             </Typography>
           </div>
         </Modal>

@@ -13,10 +13,10 @@ import PortModal from './portModal'
 
 const styles = {
   card: {
-    maxWidth: 250,
+    maxWidth: 300,
   },
   media: {
-    height: 250,
+    height: 300,
   },
   action: {
     backgroundColor: 'inherit!important',
@@ -27,7 +27,7 @@ const PortCard = (props) => {
   const { classes, linkText, link } = props
   const playTic = link || linkText ? <Button href={link} className={classes.button} variant="text" onChange={props.resetLightSwitch}>{linkText}</Button> : null
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} elevation={6} square={true}>
       <CardActionArea className={classes.action} onClick={props.onChange}>
         <CardMedia
           style={{backgroundColor: props.colors, backgroundSize: props.imageSize}}

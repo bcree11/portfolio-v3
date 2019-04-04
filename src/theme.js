@@ -18,3 +18,5 @@ export default createMuiTheme({
     useNextVariants: true,
   },
 });
+
+//#2e97ff

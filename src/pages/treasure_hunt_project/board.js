@@ -34,11 +34,13 @@ class Board extends Component {
         spaces[id]="🎁"
         count = "You Found The Present!"
         message = ``
-      } else if (bomb === id){
+        // eslint-disable-next-line
+      } else if (bomb == id){
         spaces[id]='💩'
         count = "You Got Caught!"
         message = ``
-      } else if (spaces[id]==="🎅"){
+        // eslint-disable-next-line
+      } else if (spaces[id]=="🎅"){
         count= count +1
       } else {
         spaces[id]="🎅"

@@ -12,10 +12,10 @@ export default (props) => (
             <a style={whiteIconStyle} href="mailto:b.marcus.cree@gmail.com">
               <i className="zmdi zmdi-email"></i> b.marcus.cree@gmail.com{' | '}
             </a>
-            <a style={whiteIconStyle} href="https://github.com/bcree11" target="_blank">
+            <a style={whiteIconStyle} href="https://github.com/bcree11" target="_blank" rel="noopener noreferrer">
               <i className="zmdi zmdi-github-box"></i> github.com/bcree11
             </a>{' | '}
-            <a style={whiteIconStyle} href="https://www.linkedin.com/in/bcree/" target="_blank">
+            <a style={whiteIconStyle} href="https://www.linkedin.com/in/bcree/" target="_blank" rel="noopener noreferrer">
               <i className="zmdi zmdi-linkedin-box"></i> linkedin.com/in/bcree
             </a>
           </p>

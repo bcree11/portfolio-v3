@@ -26,7 +26,7 @@ export default props => (
         <Route path='/tech-talk/flex' exact component={Flex}/>
         <Route path='/tech-talk/grid' exact component={Grid}/>
         <Route path='/tech-talk/background' exact component={Background}/>
-        <Route path='/christmast-present-hunt' exact component={TreasureHunt}/>
+        <Route path='/christmas-present-hunt' exact component={TreasureHunt}/>
       </Switch>
     </Layout>
   </BrowserRouter>
