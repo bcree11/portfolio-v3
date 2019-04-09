@@ -12,7 +12,13 @@ span, a, h1, h2, h3, h4, h5, h6 {
 }
 
 nav > div > .brand-logo {
+  color: #ffae1a;
   font-size: 1.75rem;
+  font-weight: 900;
+}
+nav > div > ul > li > a {
+  color: #ffae1a!important;
+  font-weight: 900;
 }
 /* button:focus {
   background-color: inherit;

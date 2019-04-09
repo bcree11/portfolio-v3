@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles'
 
 import Header from '../components/header'
 import AboutMe from '../components/about'
-import CardGrid from '../components/cardGrid'
+import CardGrid from '../components/portfolio/cardGrid'
 import Skills from '../components/skills/skills.js'
 
 import {
@@ -35,15 +35,20 @@ const styles = {
     width: '35rem',
   },
   masonryBrickRight: {
-    // marginBottom:'3rem',
     margin:' 0 3rem 3rem 0',
     width: '35rem',
   },
-  title: {
+  header: {
     backgroundColor: '#2e8af7',
-    fontSize: '8rem',
-    padding: '2rem',
-    marginBottom: '5rem',
+    fontSize: '4rem',
+    padding: '3rem',
+    marginBottom: '8rem',
+  },
+  title: {
+    borderBottom: '6px solid black',
+    lineHeight: '4.5rem',
+    display: 'inline-block',
+    margin: 0,
   }
 }
 
@@ -71,17 +76,19 @@ class Home extends React.Component{
       }, 3000);
     }
   }
+
    sectionTitle = ( title ) => {
     const { classes } = this.props
     return(
-    <header className={classes.title}>
-      <span style={{borderBottom: '12px solid black', lineHeight: '8rem'}}>{title}</span>
+    <header className={classes.header}>
+      <h1 className={classes.title}>{title}</h1>
     </header>)
   }
+
   render(){
     const { classes } = this.props
     return(
-      <React.Fragment>
+      <main>
         <Grid
           container
           justify="center"
@@ -106,6 +113,12 @@ class Home extends React.Component{
                 </div>
                 <div className={classes.masonryBrickLeft}>
                   <Skills
+                    skills={otherSkills}
+                    skillsTitle='Other Skills'
+                  />
+                </div>
+                <div className={classes.masonryBrickRight}>
+                  <Skills
                     skills={frameworks}
                     skillsTitle='Frameworks'
                   />
@@ -122,12 +135,6 @@ class Home extends React.Component{
                     skillsTitle='Testing'
                   />
                 </div>
-                <div className={classes.masonryBrickRight}>
-                  <Skills
-                    skills={otherSkills}
-                    skillsTitle='Other Skills'
-                  />
-                </div>
               </div>
             </div>
           </Grid>
@@ -140,7 +147,7 @@ class Home extends React.Component{
             />
           </Grid>
         </Grid>
-      </React.Fragment>
+      </main>
     )
   }
 }

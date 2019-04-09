@@ -7,16 +7,16 @@ export default (props) => (
     <div className="container">
       <div className="row">
         <div className="col s12">
-          <h3 className="white-text">Brandon Cree</h3>
-          <p className="white-text text-lighten-4">
+          <h3>Brandon Cree</h3>
+          <p className="text-lighten-4">
             <a style={whiteIconStyle} href="mailto:b.marcus.cree@gmail.com">
               <i className="zmdi zmdi-email"></i> b.marcus.cree@gmail.com{' | '}
             </a>
             <a style={whiteIconStyle} href="https://github.com/bcree11" target="_blank" rel="noopener noreferrer">
-              <i className="zmdi zmdi-github-box"></i> github.com/bcree11
-            </a>{' | '}
+              <i className="zmdi zmdi-github-box"></i> github.com/bcree11{' | '}
+            </a>
             <a style={whiteIconStyle} href="https://www.linkedin.com/in/bcree/" target="_blank" rel="noopener noreferrer">
-              <i className="zmdi zmdi-linkedin-box"></i> linkedin.com/in/bcree
+              <i className="zmdi zmdi-linkedin-box white-text"></i> linkedin.com/in/bcree
             </a>
           </p>
         </div>
@@ -28,9 +28,10 @@ export default (props) => (
 const footerStyle = {
   paddingBottom: '20px',
   textAlign: 'center',
+  color: '#ffae1a',
 }
 
 const whiteIconStyle = {
-  color: 'white',
   textTransform: 'none',
+  color: '#ffae1a',
 }

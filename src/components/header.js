@@ -4,11 +4,12 @@ import { withStyles } from '@material-ui/core/styles'
 
 const styles = theme => ({
   root: {
-    height: '60vh',
+    height: '68vh',
     backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./images/beachSunset.jpg")`,
-    backgroundSize: 'cover',
+    backgroundSize: '120%',
     backgroundRepeat: 'no-repeat',
     backgroundPositionY: '85%',
+    backgroundPositionX: '59%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -20,11 +21,14 @@ const styles = theme => ({
     fontSize: 'calc(4em + (50 - 4) * ((100vw - 300px) / (1600 - 300)))',
     // transform: 'scale(1,2)',
     marginBottom: '2em',
+    fontWeight: 900
   },
   links: {
     color: '#ffae1a',
     fontSize: '2em',
-    fontWeight: 'bold',
+  },
+  career: {
+    fontWeight: 900
   }
 })
 //color: #ffae1a
@@ -33,7 +37,7 @@ const Header = ({ classes }) => (
     <header className={classes.root}>
       <div className={classes.links}>
         <span className={classes.title}>BRANDON CREE</span>
-        <h4>Junior Web Developer</h4>
+        <h4 className={classes.career}>Junior Web Developer</h4>
         <div style={{marginBottom: '1em'}}>
           <a style={{marginRight: '1rem'}} href="https://github.com/bcree11" target="_blank" rel="noopener noreferrer">
             <i className="zmdi zmdi-github-box"></i>

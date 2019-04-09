@@ -20,32 +20,37 @@ const styles = {
   },
   action: {
     backgroundColor: 'inherit!important',
+  },
+  content: {
+    height: '7rem'
   }
 }
 
 const PortCard = (props) => {
-  const { classes, linkText, link } = props
-  const playTic = link || linkText ? <Button href={link} className={classes.button} variant="text" onChange={props.resetLightSwitch}>{linkText}</Button> : null
+  const { classes, card_info } = props
+  const playTic = card_info.link || card_info.linkText ? <Button href={card_info.link} className={classes.button} variant="text" onChange={props.resetLightSwitch}>{card_info.linkText}</Button> : null
   return (
     <Card className={classes.card} elevation={6} square={true}>
       <CardActionArea className={classes.action} onClick={props.onChange}>
         <CardMedia
-          style={{backgroundColor: props.colors, backgroundSize: props.imageSize}}
+          style={{backgroundColor: props.colors, backgroundSize: card_info.imageSize}}
           className={classes.media}
-          image={props.image}
-          title={props.title}
+          image={card_info.image ? card_info.image : props.image}
+          title={card_info.title}
         />
-        <CardContent>
+        <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
+            {card_info.title}
           </Typography>
           <Typography component="p">
-            {props.comment}
+            {card_info.comment}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <PortModal/>
+        <PortModal
+          card_info={card_info}
+        />
         {playTic}
       </CardActions>
     </Card>
