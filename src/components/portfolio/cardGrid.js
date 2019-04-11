@@ -63,31 +63,26 @@ class CardGrid extends React.Component{
     const { classes } = this.props
     const { colorCounter, colors, sunAndMoon } = this.state
     const portfolio_cards = [
-      discrete,
-      tool,
-      batter,
-      portfolio,
-      tech_talk,
-      tictactoe,
-      treasure
+      {id: 1, project: discrete},
+      {id: 2, project: tool},
+      {id: 3, project: batter},
+      {id: 4, project: portfolio},
+      {id: 5, project: tech_talk},
+      {id: 6, project: tictactoe},
+      {id: 7, project: treasure},
+      {id: 8, project: lightSwitch, image: sunAndMoon, onChange: this.SunChange},
+      {id: 9, project: colorBox, colors: colors[colorCounter].code, onChange: this.colorBox},
     ]
     return(
       <section className={classes.root}>
         {portfolio_cards.map(card =>
-          <PortCard
-            card_info={card}
+          <PortCard key={card.id}
+            card_info={card.project}
+            image={card.image}
+            colors={card.colors}
+            onChange={card.onChange}
           />
         )}
-        <PortCard
-          card_info={lightSwitch}
-          image={sunAndMoon}
-          onChange={this.SunChange}
-        />
-        <PortCard
-          card_info={colorBox}
-          colors={colors[colorCounter].code}
-          onChange={this.colorBox}
-        />
       </section>
     )
   }

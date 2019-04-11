@@ -3,7 +3,8 @@ export const colorBox = {
                         title: 'Color Box',
                         description: `Color Box was my introduction to React and
                         state changes.`,
-                        tech: 'React'
+                        tech: 'React',
+                        comment: 'Click Image',
                       }
 
 export const lightSwitch = {
@@ -14,6 +15,7 @@ export const lightSwitch = {
                         between parent and child components.`,
                         tech: 'React, GIMP',
                         code: 'https://github.com/bcree11/light-switch-app',
+                        comment: 'Click Image',
                       }
 
 export const treasure = {
@@ -51,11 +53,13 @@ export const tech_talk = {
                         date: 'January 2019',
                         title: 'Tech Talk',
                         description: `I did a tech talk on responsive design for
-                        my cohort. I choose this topic because I had recently
-                        begun working on my portfolio website and was learning a
-                        lot about the topic. I wanted to share with them things
-                        that tripped me up and how to overcome them, along with
-                        new techniques that I learned.`,
+                        my bootcamp cohort. I choose this topic because I had
+                        recently begun working on my portfolio website and was
+                        learning a lot about the topic. I wanted to share with
+                        them things that tripped me up and how to overcome them
+                        , along with new techniques that I learned. I built an
+                        app, link below, to give live examples of the topics I
+                        discussed.`,
                         tech: 'React, Bootstrap, React-Router',
                         code: 'https://github.com/bcree11/tech-talk',
                         image: '../images/responsive.png',
@@ -74,9 +78,9 @@ export const portfolio = {
                         3, I've learned a lot from this project.`,
                         tech: 'React, React-Router, Material-UI, Materialize, Bootstrap',
                         code: [
-                          'https://github.com/bcree11/PortfolioWebsite',
-                          'https://github.com/bcree11/portfolio-v2',
-                          'https://github.com/bcree11/portfolio-v3'
+                          {id: 1, version: 'https://github.com/bcree11/PortfolioWebsite'},
+                          {id: 2, version: 'https://github.com/bcree11/portfolio-v2'},
+                          {id: 3, version: 'https://github.com/bcree11/portfolio-v3'}
                         ],
                         image: '../images/BrandonCree.png',
                       }
@@ -98,23 +102,25 @@ export const tool = {
                         date: 'February 2019',
                         title: 'ToolShare',
                         contribution: [
-                          'Set up Rails and react-rails',
-                          `Set up Devise, along with strong params to allow new
-                          fields in the user table`,
-                          'Set up routes and controllers',
-                          'Created the tools table',
-                          'Built the unauth and auth pages',
-                          `Set up the CRUD method in React and used the Fetch
-                          API to manipulated data`,
-                          'Added two Google APIs, Maps Javascript and Geocode',
-                          'Set up Mailboxer so that users can DM one another',
-                          'Added Moment.js'
+                          {id: 1, text: 'Set up Rails and react-rails'},
+                          {id: 2, text: `Set up Devise, along with strong params
+                            to allow new fields in the user table`},
+                          {id: 3, text: 'Set up routes and controllers'},
+                          {id: 4, text: 'Created the tools table'},
+                          {id: 5, text: 'Built the unauth and auth pages'},
+                          {id: 6, text: `Set up the CRUD method in React and
+                            used the Fetch API to manipulated data`},
+                          {id: 7, text: `Added two Google APIs, Maps Javascript
+                            and Geocode`},
+                          {id: 8, text: `Set up Mailboxer so that users can DM
+                            one another`},
+                          {id: 9, text: 'Added Moment.js'}
                         ],
                         description: `ToolShare was my group's final project.
                         We were given two weeks to build a full stack Rails
                         single page app from the ground up. The app gives users
                         a platform that they can use to rent out tools or rent
-                        them, or both.`,
+                        them or both.`,
                         tech: `Rails, React (using react-rails gem), PostgreSQL,
                         Devise, Google Maps API, Mailboxer, React-Router,
                         Moment.js`,
@@ -128,15 +134,17 @@ export const discrete = {
                         date: 'March 2019',
                         title: 'Discrete Chill',
                         contribution: [
-                          `Learned Node.js, Express.js, and MySQL and built a
-                          MERN stack CRUD app from scratch`,
-                          `Learned Next.js and converted our standard React app
-                          into it in order to have server-side-rendering`,
-                          `Created fully accessible web pages`,
-                          `Learned AWS Amplify and Amazon Cognito and added
-                          them to our project as a means for authentication`,
-                          `Utilized Sequelize as our ORM to help us manage
-                          queries to our MySQL database`
+                          {id: 1, text: `Learned Node.js, Express.js, and MySQL
+                            and built a MERN stack CRUD app from scratch`},
+                          {id: 2, text: `Learned Next.js and converted our
+                            standard React app into it in order to have
+                            server-side-rendering`},
+                          {id: 3, text: `Created fully accessible web pages`},
+                          {id: 4, text: `Learned AWS Amplify and Amazon Cognito
+                            and integrated them to our project as a means for
+                            authentication`},
+                          {id: 5, text: `Utilized Sequelize as our ORM to help us manage
+                            queries to our MySQL database`}
                         ],
                         description: `As part of my internship, I had to build
                         a MERN stack app from scratch.`,

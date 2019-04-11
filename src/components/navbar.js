@@ -11,10 +11,10 @@ export default (props) => (
         <Link to="/" className="brand-logo center">{props.title}</Link>
         <ul id="nav-mobile" className="left hide-on-med-and-down">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="#aboutMe">About Me</Link></li>
-          <li><Link to="badges.html">Skills</Link></li>
-          <li><Link to="collapsible.html">Portfolio</Link></li>
-          <li><Link to="collapsible.html">Contact</Link></li>
+          <li><a href="/#about">About Me</a></li>
+          <li><a href="/#skills">Skills</a></li>
+          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>

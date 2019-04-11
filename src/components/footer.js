@@ -1,37 +1,61 @@
 import React from 'react'
 import 'materialize-css'
 import 'materialize-css/dist/css/materialize.min.css'
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Fab from '@material-ui/core/Fab';
 
-export default (props) => (
-  <footer className="page-footer flow-text black" style={footerStyle}>
-    <div className="container">
-      <div className="row">
-        <div className="col s12">
-          <h3>Brandon Cree</h3>
-          <p className="text-lighten-4">
-            <a style={whiteIconStyle} href="mailto:b.marcus.cree@gmail.com">
-              <i className="zmdi zmdi-email"></i> b.marcus.cree@gmail.com{' | '}
-            </a>
-            <a style={whiteIconStyle} href="https://github.com/bcree11" target="_blank" rel="noopener noreferrer">
-              <i className="zmdi zmdi-github-box"></i> github.com/bcree11{' | '}
-            </a>
-            <a style={whiteIconStyle} href="https://www.linkedin.com/in/bcree/" target="_blank" rel="noopener noreferrer">
-              <i className="zmdi zmdi-linkedin-box white-text"></i> linkedin.com/in/bcree
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-)
+const styles = theme => ({
+  fab: {
+    fontSize: '30px',
+    margin: '20px'
+  },
+  footer: {
+    padding: '20px',
+    textAlign: 'center',
+    color: '#ffae1a',
+  },
+  contact: {
+    margin: 0,
+    textTransform: 'none'
+  },
+  footerText: {
+    fontSize: '10px',
+    padding: '0 10px 0 5px'
+  }
+});
 
-const footerStyle = {
-  paddingBottom: '20px',
-  textAlign: 'center',
-  color: '#ffae1a',
+const Footer = (props) => {
+  const { classes } = props
+  return (
+    <footer id='contact' className={`${classes.footer} page-footer flow-text black`}>
+      <h1 className={classes.contact}>Contact Me</h1>
+        <ul className={classes.contact}>
+          <li>
+            <Fab href="mailto:b.marcus.cree@gmail.com" color="primary" aria-label="Email" className={classes.fab}>
+              <i className="zmdi zmdi-email"></i>
+            </Fab>
+          </li>
+          <li>
+            <Fab href="https://github.com/bcree11" color="primary" aria-label="Github" className={classes.fab}>
+              <i className="zmdi zmdi-github-box"></i>
+            </Fab>
+          </li>
+          <li>
+            <Fab href="https://www.linkedin.com/in/bcree/" color="primary" aria-label="LinkedIn" className={classes.fab}>
+              <i className="zmdi zmdi-linkedin-box"></i>
+            </Fab>
+          </li>
+        </ul>
+        <ul className={classes.contact}>
+          <li className={classes.footerText}>Copyright © 2019 Brandon Cree</li>
+        </ul>
+    </footer>
+  )
 }
 
-const whiteIconStyle = {
-  textTransform: 'none',
-  color: '#ffae1a',
-}
+Footer.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Footer);

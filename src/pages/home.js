@@ -18,7 +18,7 @@ import {
 
 const styles = {
   container: {
-    marginBottom: '40px'
+    marginBottom: '8rem'
   },
   masonryCont: {
     display: 'flex',
@@ -77,10 +77,10 @@ class Home extends React.Component{
     }
   }
 
-   sectionTitle = ( title ) => {
+   sectionTitle = ( title, headerId ) => {
     const { classes } = this.props
     return(
-    <header className={classes.header}>
+    <header className={classes.header} id={headerId}>
       <h1 className={classes.title}>{title}</h1>
     </header>)
   }
@@ -94,15 +94,17 @@ class Home extends React.Component{
           justify="center"
           style={{backgroundColor: this.state.backgroundColor}}
         >
-          <Grid className={classes.container} item xs={12}>
+          <Grid item xs={12}>
             <Header/>
+            {/*eslint-disable-next-line*/}
+            <a class="anchor" id="about"></a>
             {this.sectionTitle('About Me')}
           </Grid>
           <Grid className={classes.container} item xs={8}>
             <AboutMe/>
           </Grid>
           <Grid className={classes.container} item xs={12}>
-            {this.sectionTitle('Technology')}
+            {this.sectionTitle('Technology', 'skills')}
             <div className={classes.masonryCont}>
               <div className={classes.masonryHome}>
                 <div className={classes.masonryBrickLeft}>
@@ -139,7 +141,7 @@ class Home extends React.Component{
             </div>
           </Grid>
           <Grid className={classes.container} item xs={12}>
-            {this.sectionTitle('Portfolio')}
+            {this.sectionTitle('Portfolio', 'portfolio')}
             <CardGrid
               lightSwitch={this.lightSwitch}
               resetLightSwitch={this.resetLightSwitch}

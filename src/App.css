@@ -2,8 +2,8 @@
   box-sizing: border-box;
 }
 
-body {
- font-family: 'Cardo', serif;
+body, p {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 span, a, h1, h2, h3, h4, h5, h6 {
@@ -20,6 +20,14 @@ nav > div > ul > li > a {
   color: #ffae1a!important;
   font-weight: 900;
 }
-/* button:focus {
-  background-color: inherit;
-} */
+
+ul li{
+  display: inline;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -64px;
+    visibility: hidden;
+}

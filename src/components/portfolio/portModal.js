@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button'
 const styles = theme => ({
   paper: {
     position: 'absolute',
-    width: theme.spacing.unit * 50,
+    width: theme.spacing.unit * 75,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing.unit * 4,
@@ -16,10 +16,24 @@ const styles = theme => ({
   },
   button: {
     margin: theme.spacing.unit,
+    color: 'black',
+      '&:focus': {
+        backgroundColor: 'inherit'
+      },
+      '&:hover': {
+        backgroundColor: '#ffae1a'
+      },
+  },
+  modalTitle: {
+    margin: '0 0 20px 0',
   },
   titles: {
     borderBottom: '2px solid black',
     display: 'inline-block'
+  },
+  projectDescription: {
+    backgroundColor: 'rgba(242,242,242,0.5)',
+    padding: '20px',
   }
 })
 
@@ -52,13 +66,13 @@ class PortModal extends React.Component {
         <div>
           <ul>
           {card_info.contribution.map(contribution =>
-            <li>
+            <li key={contribution.id}>
               <i
                 className="zmdi zmdi-circle"
                 style={{fontSize: '6px'}}
               >
               </i>
-              {' '}{contribution}
+              {' '}{contribution.text}
             </li>
           )}
           </ul>
@@ -68,30 +82,30 @@ class PortModal extends React.Component {
     const source_code = card_info.title === 'Portfolio' ?
       <React.Fragment>
         {card_info.code.map((code, index) =>
-          <Button href={code}>V{index+1}</Button>
+          <Button className={classes.button} color='primary' href={code.version} key={code.id}>V{code.id}</Button>
         )}
         {' '}
       </React.Fragment> :
-      <Button href={card_info.code}>Link</Button>
+      <Button className={classes.button} color='primary' href={card_info.code}>Link</Button>
     const title = card_info.title === 'Tech Talk' ?
       'Tech Talk: Responsive Design' : card_info.title
 
     return (
       <div>
-        <Button onClick={this.handleOpen} className={classes.button} variant="text">
+        <Button onClick={this.handleOpen} className={classes.button} color='primary'>
           Learn More
         </Button>
         <Modal
-          aria-labelledby="simple-modal-title"
-          aria-describedby="simple-modal-description"
+          aria-labelledby={card_info.title}
+          aria-describedby={`${card_info.title}-description`}
           open={this.state.open}
           onClose={this.handleClose}
         >
           <div style={getModalStyle()} className={classes.paper}>
-            <Typography variant="h4" id={`${card_info.title}`}>
+            <Typography className={classes.modalTitle} variant="h4" id={`${card_info.title}`}>
               {title}
             </Typography>
-            <Typography id={`${card_info.title}-description`}>
+            <Typography className={classes.projectDescription} id={`${card_info.title}-description`}>
               <div>
                 <h6 className={classes.titles}>Date</h6>
                 <div>{card_info.date}</div>

@@ -7,7 +7,9 @@ import CardMedia from '@material-ui/core/CardMedia'
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -20,13 +22,17 @@ const styles = theme => ({
   media: {
     height: 300,
   },
+  describeMe: {
+    backgroundColor: 'rgba(242,242,242,0.5)',
+    padding: '20px',
+  }
 })
 
 const AboutMe = (props) => {
   const { classes } = props
   return(
-    <section style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <div >
+    <section className={classes.root}>
+      <div>
         <Card className={classes.card} elevation={12} square={true}>
           <CardMedia
             style={{backgroundColor: props.colors, backgroundSize: props.imageSize}}
@@ -39,8 +45,7 @@ const AboutMe = (props) => {
       <div>
         <Paper className={classes.paper} elevation={6} square={true}>
           <h3>Who Am I?</h3>
-          <hr/>
-          <p className="text flow-text">
+          <p className={`${classes.describeMe} text flow-text`}>
             Hi, my name is Brandon. I’m a student at LEARN Academy, where I’m
             studying the ins and outs of full stack web development after 4 years
             in sales in the beer industry. I’m a logical thinker who enjoys problem
