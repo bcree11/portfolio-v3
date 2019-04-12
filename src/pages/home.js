@@ -43,6 +43,8 @@ const styles = {
     fontSize: '4rem',
     padding: '3rem',
     marginBottom: '8rem',
+    paddingTop: '64px',
+    marginTop: '-64px',
   },
   title: {
     borderBottom: '6px solid black',
@@ -97,8 +99,7 @@ class Home extends React.Component{
           <Grid item xs={12}>
             <Header/>
             {/*eslint-disable-next-line*/}
-            <a class="anchor" id="about"></a>
-            {this.sectionTitle('About Me')}
+            {this.sectionTitle('About Me', 'about')}
           </Grid>
           <Grid className={classes.container} item xs={8}>
             <AboutMe/>

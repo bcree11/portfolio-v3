@@ -5,11 +5,14 @@ import Paper from '@material-ui/core/Paper'
 import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
 
+import mypic from '../images/BrandonCree.png'
+
 const styles = theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -37,7 +40,7 @@ const AboutMe = (props) => {
           <CardMedia
             style={{backgroundColor: props.colors, backgroundSize: props.imageSize}}
             className={classes.media}
-            image='../images/BrandonCree.png'
+            image={mypic}
             title={props.title}
           />
         </Card>

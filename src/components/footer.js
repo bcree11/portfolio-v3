@@ -14,14 +14,20 @@ const styles = theme => ({
     padding: '20px',
     textAlign: 'center',
     color: '#ffae1a',
+    display: 'flex',
+    flexDirection: 'column'
   },
   contact: {
     margin: 0,
-    textTransform: 'none'
+    textTransform: 'none',
+    display: 'inline'
   },
   footerText: {
     fontSize: '10px',
     padding: '0 10px 0 5px'
+  },
+  inline: {
+    display: 'inline'
   }
 });
 
@@ -31,17 +37,17 @@ const Footer = (props) => {
     <footer id='contact' className={`${classes.footer} page-footer flow-text black`}>
       <h1 className={classes.contact}>Contact Me</h1>
         <ul className={classes.contact}>
-          <li>
+          <li className={classes.inline}>
             <Fab href="mailto:b.marcus.cree@gmail.com" color="primary" aria-label="Email" className={classes.fab}>
               <i className="zmdi zmdi-email"></i>
             </Fab>
           </li>
-          <li>
+          <li className={classes.inline}>
             <Fab href="https://github.com/bcree11" color="primary" aria-label="Github" className={classes.fab}>
               <i className="zmdi zmdi-github-box"></i>
             </Fab>
           </li>
-          <li>
+          <li className={classes.inline}>
             <Fab href="https://www.linkedin.com/in/bcree/" color="primary" aria-label="LinkedIn" className={classes.fab}>
               <i className="zmdi zmdi-linkedin-box"></i>
             </Fab>

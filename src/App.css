@@ -21,10 +21,6 @@ nav > div > ul > li > a {
   font-weight: 900;
 }
 
-ul li{
-  display: inline;
-}
-
 a.anchor {
     display: block;
     position: relative;

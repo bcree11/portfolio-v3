@@ -160,12 +160,12 @@ export default class Board extends Component {
           </div>
           <div className='ResetButtons'>
             <div className='Button'>
-            <p className='ResetStatement'>Continue VS</p>
-            <button type="button" className="Reset btn btn-primary" onClick={() => this.reset()}>Refresh Board</button>
+              <p className='ResetStatement'>Continue VS</p>
+              <button type="button" className="Reset btn btn-primary" onClick={() => this.reset()}>Refresh</button>
             </div>
             <div className='Button'>
-            <p className='ResetStatement'>New Game</p>
-            <button type="button" className="Reset btn btn-danger" onClick={() => this.newGameReset()}>Reset Game</button>
+              <p className='ResetStatement'>New Game</p>
+              <button type="button" className="Reset btn btn-danger" onClick={() => this.newGameReset()}>Reset Game</button>
             </div>
           </div>
         </div>

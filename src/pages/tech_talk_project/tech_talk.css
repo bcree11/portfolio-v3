@@ -4,6 +4,7 @@
 
 .TechTalk > div {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 /* Grid Page */
@@ -83,7 +84,7 @@
   flex: 50%;
   margin-top: 10vh;
   padding: 0;
-  background-color: black!important;
+  background-color: red!important;
 }
 
 .flex5{

@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles'
 
+import moon from './images/Moon.png'
+import sun from './images/Sun.png'
 import {
   colorBox,
   lightSwitch,
@@ -29,7 +31,7 @@ class CardGrid extends React.Component{
   state = {
     colorCounter: 0,
     lightCounter: 0,
-    sunAndMoon: './images/Moon.png',
+    sunAndMoon: moon,
     colors: [
       {word:'Yellow',code:'#f7e51b',font:'#000000'},
       {word:'Blue',code:'#1260ce', font:'#FFFFFF'},
@@ -55,7 +57,7 @@ class CardGrid extends React.Component{
     const {lightSwitch, lightTimer}=this.props
     lightSwitch()
     lightTimer()
-    sunAndMoon = lightCounter%2 !== 0 ? "./images/Moon.png" : "./images/Sun.png"
+    sunAndMoon = lightCounter%2 !== 0 ? moon : sun
     this.setState({sunAndMoon: sunAndMoon, lightCounter: lightCounter+1})
   }
 

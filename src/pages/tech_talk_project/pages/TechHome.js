@@ -4,8 +4,7 @@ import TechNav from '../tech_talk'
 export default class TechHome extends Component {
   render(){
     return(
-      <div>
-        <TechNav>
+      <TechNav>
         <h1>Tech Talk</h1>
         <hr/>
         <h1>Contact Info:</h1>
@@ -17,8 +16,7 @@ export default class TechHome extends Component {
               <h3>https://github.com/bcree11</h3>
           </h3>
         </div>
-        </TechNav>
-      </div>
+      </TechNav>
     )
   }
 }

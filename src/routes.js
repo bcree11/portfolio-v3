@@ -19,14 +19,14 @@ export default props => (
   <BrowserRouter>
     <Layout>
       <Switch>
-        <Route exact path='/' component={Home}/>
         <Route exact path='/tic-tac-toe' component={TicTacToe}/>
-        <Route path='/tech-talk' exact component={TechHome}/>
-        <Route path='/tech-talk/mediaquery' exact component={MediaQ}/>
-        <Route path='/tech-talk/flex' exact component={Flex}/>
-        <Route path='/tech-talk/grid' exact component={Grid}/>
-        <Route path='/tech-talk/background' exact component={Background}/>
-        <Route path='/christmas-present-hunt' exact component={TreasureHunt}/>
+        <Route exact path='/tech-talk' component={TechHome}/>
+        <Route exact path='/tech-talk/mediaquery' component={MediaQ}/>
+        <Route exact path='/tech-talk/flex' component={Flex}/>
+        <Route exact path='/tech-talk/grid' component={Grid}/>
+        <Route exact path='/tech-talk/background' component={Background}/>
+        <Route exact path='/christmas-present-hunt' component={TreasureHunt}/>
+        <Route path='/' component={Home}/>
       </Switch>
     </Layout>
   </BrowserRouter>

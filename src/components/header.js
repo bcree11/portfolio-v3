@@ -2,10 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles'
 
+import headerBackground from '../images/code.jpg'
+
 const styles = theme => ({
   root: {
     height: 'calc(100vh - 64px)',
-    backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("./images/code.jpg")`,
+    backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(${headerBackground})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPositionY: '85%',
@@ -19,7 +21,7 @@ const styles = theme => ({
     lineHeight: '1',
   },
   title: {
-    fontSize: 'calc(16em + 100 * ((70vw - 1700px) / (900)))',
+    fontSize: 'calc(18em + 100 * ((70vw - 1700px) / (900)))',
     textTransform: 'none',
     // transform: 'scale(1,2)',
     // marginBottom: '2em',
@@ -45,16 +47,7 @@ const styles = theme => ({
 const Header = ({ classes }) => (
     <header className={classes.root}>
       <div className={classes.titleContainer}>
-        <span className={classes.title}>Junior Web Developer</span>
-        {/*<h4 className={classes.career}>Junior Web Developer</h4>*/}
-        {/*<div className={classes.linksContainer}>
-          <a className={classes.links} href="https://github.com/bcree11" target="_blank" rel="noopener noreferrer">
-            <i className="zmdi zmdi-github-box"></i>
-          </a>{' '}
-          <a className={classes.links} href="https://www.linkedin.com/in/bcree/" target="_blank" rel="noopener noreferrer">
-            <i className="zmdi zmdi-linkedin-box"></i>
-          </a>
-        </div>*/}
+        <span className={classes.title}>Web Developer</span>
       </div>
     </header>
   )

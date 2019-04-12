@@ -1,3 +1,10 @@
+import treasureImg from './images/hunt.png'
+import tictactoeImg from './images/tictactoe.png'
+import talkImg from './images/responsive.png'
+import portfolioImg from './images/portfolio.png'
+import batterImg from './images/BatterUp.png'
+import chillImg from './images/chill.png'
+
 export const colorBox = {
                         date: 'December 2018',
                         title: 'Color Box',
@@ -26,7 +33,7 @@ export const treasure = {
                         you get caught and end up with a lump of coal!`,
                         tech: 'React, Bootstrap',
                         code: 'https://github.com/bcree11/christmas-treasure-hunt-app',
-                        image:'../images/hunt.png',
+                        image: treasureImg,
                         link:'/christmas-present-hunt',
                         linkText:'Play',
                       }
@@ -38,13 +45,13 @@ export const tictactoe = {
                         can be. I learned about maintaining state, passing props,
                         and how to deal with user interactions. The app keeps
                         track of the users' scores versus one another, switches
-                        which user goes first and prompts that person,
+                        which user goes first after every round and prompts that person,
                         highlights the winning combination, and allows
-                        the user to reset the board in order to keep the current
+                        the users to reset the board in order to keep the current
                         score or to reset the game entirely.`,
                         tech: 'React, GIMP, Bootstrap',
                         code: 'https://github.com/bcree11/tic-tac-toe-app',
-                        image: '../images/tictactoe.png',
+                        image: tictactoeImg,
                         link: '/tic-tac-toe',
                         linkText: 'Play',
                       }
@@ -62,7 +69,7 @@ export const tech_talk = {
                         discussed.`,
                         tech: 'React, Bootstrap, React-Router',
                         code: 'https://github.com/bcree11/tech-talk',
-                        image: '../images/responsive.png',
+                        image: talkImg,
                         imageSize: 'contain',
                         link: '/tech-talk',
                         linkText: 'Link',
@@ -73,7 +80,7 @@ export const portfolio = {
                         title: 'Portfolio',
                         description: `I started this project in mid-January in
                         order to get a better grasp on React. Every time I
-                        learned something new I modified the code or, in some
+                        learned something new I updated the code or, in some
                         cases, started over from scratch. Currently on version
                         3, I've learned a lot from this project.`,
                         tech: 'React, React-Router, Material-UI, Materialize, Bootstrap',
@@ -82,7 +89,7 @@ export const portfolio = {
                           {id: 2, version: 'https://github.com/bcree11/portfolio-v2'},
                           {id: 3, version: 'https://github.com/bcree11/portfolio-v3'}
                         ],
-                        image: '../images/BrandonCree.png',
+                        image: portfolioImg,
                       }
 
 export const batter = {
@@ -92,7 +99,7 @@ export const batter = {
                         Place Winner. See Devpost link below for more details.`,
                         tech: 'React, Python',
                         code: 'https://devpost.com/software/batter-up-yudmpt',
-                        image: '../images/BatterUp.png',
+                        image: batterImg,
                         link: 'https://devpost.com/software/batter-up-yudmpt',
                         linkText: 'Devpost',
                         comment: 'Baseball Hack Day 2019 San Diego 2nd Place Winner'
@@ -103,18 +110,18 @@ export const tool = {
                         title: 'ToolShare',
                         contribution: [
                           {id: 1, text: 'Set up Rails and react-rails'},
-                          {id: 2, text: `Set up Devise, along with strong params
+                          {id: 2, text: `Constructed app's routes and controllers`},
+                          {id: 3, text: 'Created the app\'s tools table'},
+                          {id: 4, text: 'Built the unauth and auth pages'},
+                          {id: 5, text: `Set up Devise, along with strong params
                             to allow new fields in the user table`},
-                          {id: 3, text: 'Set up routes and controllers'},
-                          {id: 4, text: 'Created the tools table'},
-                          {id: 5, text: 'Built the unauth and auth pages'},
-                          {id: 6, text: `Set up the CRUD method in React and
+                          {id: 6, text: `Built the CRUD method in React and
                             used the Fetch API to manipulated data`},
-                          {id: 7, text: `Added two Google APIs, Maps Javascript
-                            and Geocode`},
+                          {id: 7, text: `Utilized two Google APIs, Maps Javascript
+                            and Geocode, to show renter's the area the tool's
+                            owner wants to meet in`},
                           {id: 8, text: `Set up Mailboxer so that users can DM
                             one another`},
-                          {id: 9, text: 'Added Moment.js'}
                         ],
                         description: `ToolShare was my group's final project.
                         We were given two weeks to build a full stack Rails
@@ -134,22 +141,17 @@ export const discrete = {
                         date: 'March 2019',
                         title: 'Discrete Chill',
                         contribution: [
-                          {id: 1, text: `Learned Node.js, Express.js, and MySQL
-                            and built a MERN stack CRUD app from scratch`},
-                          {id: 2, text: `Learned Next.js and converted our
-                            standard React app into it in order to have
-                            server-side-rendering`},
-                          {id: 3, text: `Created fully accessible web pages`},
-                          {id: 4, text: `Learned AWS Amplify and Amazon Cognito
-                            and integrated them to our project as a means for
-                            authentication`},
-                          {id: 5, text: `Utilized Sequelize as our ORM to help us manage
-                            queries to our MySQL database`}
+                          {id: 1, text: `Built a MERN stack CRUD app utilizing and MySQL, Express.js, React.js, and Node.js`},
+                          {id: 2, text: `Converted our boilerplate React app into Next.js in order to reap the benefits of server-side-rendering`},
+                          {id: 3, text: `Utilized AWS Amplify and Amazon Cognito as a means for user authentication`},
+                          {id: 4, text: `Created fully accessible web pages`},
+                          {id: 5, text: `Utilized Sequelize as our ORM to help manage queries to our MySQL database`}
                         ],
                         description: `As part of my internship, I had to build
                         a MERN stack app from scratch.`,
                         tech: `React, MySQL, Express, Node.js, Next.js,
                         Sequelize, AWS Amplify, Amazon Cognito, Material-UI`,
                         code: 'More information upon request',
-                        image: '',
+                        image: chillImg,
+                        imageSize: 'contain',
                       }
