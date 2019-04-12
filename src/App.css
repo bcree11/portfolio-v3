@@ -21,9 +21,35 @@ nav > div > ul > li > a {
   font-weight: 900;
 }
 
-a.anchor {
-    display: block;
-    position: relative;
-    top: -64px;
-    visibility: hidden;
+table.striped>tbody>tr:nth-child(odd) {
+    background-color: rgba(0,0,0,.07)!important;
+}
+
+@media (max-width: 900px) {
+  /* skills */
+  .Home-masonryHome-3 {
+    max-height: none!important;
+    margin-left: 3rem!important;
+  }
+
+  .Home-masonryCont-2 {
+    margin-left: 0!important;
+  }
+
+  .Home-masonryBrickLeft-4 {
+    margin: 0 0 3rem 0!important;
+  }
+  /* cards */
+  .CardGrid-root-154 {
+    grid-template-columns: repeat(2, 20rem)!important;
+  }
+
+}
+
+@media (max-width: 700px) {
+  /* cards */
+  .CardGrid-root-154 {
+    grid-template-columns: repeat(1, 20rem)!important;
+  }
+
 }

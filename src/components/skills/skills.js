@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '/Users/bcree/Desktop/portfolio-v3/src/App.css'
 import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import 'materialize-css'
@@ -11,6 +12,7 @@ const styles = theme => ({
   },
   table: {
     border: 'none!important',
+
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -29,14 +31,19 @@ const styles = theme => ({
   },
   title: {
     display: 'flex'
-  }
+  },
+  expressLogo: {
+    height: '1.5rem',
+    verticalAlign: '-1.5rem',
+  },
 })
 
-const SkillsTable = (props) => (
-  <React.Fragment>
-    { props.skills &&
+const SkillsTable = (props) => {
+  return(
+    <React.Fragment>
+      {props.skills &&
         props.skills.map((skill, index) => (
-          <tr key={skill.id} className={props.skillsObject}>
+          <tr key={skill.id}>
             <td className={props.skillsTable}>
               <p>{'{ '}name:</p>
             </td>
@@ -53,10 +60,10 @@ const SkillsTable = (props) => (
               <p>{' }'} ,</p>
             </td>
           </tr>
-    ))}
-  </React.Fragment>
-)
-
+      ))}
+    </React.Fragment>
+  )
+}
 const Skills = (props) => {
   const { classes, skills, skillsTitle } = props
   return(
@@ -69,6 +76,7 @@ const Skills = (props) => {
               skillsLogos={classes.skillsLogos}
               skillsTable={classes.table}
               skills={skills}
+              expressLogo={classes.expressLogo}
             />
           </tbody>
         </table>

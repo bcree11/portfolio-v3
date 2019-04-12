@@ -23,7 +23,7 @@ const styles = {
   masonryCont: {
     display: 'flex',
     justifyContent: 'center',
-    marginLeft: '-35rem',
+    marginLeft: '-30rem',
   },
   masonryHome: {
     maxHeight: '120rem',
@@ -32,26 +32,25 @@ const styles = {
   },
   masonryBrickLeft: {
     margin:' 0 3rem 3rem 0',
-    width: '35rem',
+    width: '30rem',
   },
   masonryBrickRight: {
     margin:' 0 3rem 3rem 0',
-    width: '35rem',
+    width: '30rem',
   },
-  header: {
+  subheader: {
     backgroundColor: '#2e8af7',
-    fontSize: '4rem',
     padding: '3rem',
     marginBottom: '8rem',
-    paddingTop: '64px',
-    marginTop: '-64px',
+    paddingTop: '100px',
+    display: 'flex',
+    alignItems: 'center',
   },
   title: {
+    margin: '0 0 20px',
     borderBottom: '6px solid black',
-    lineHeight: '4.5rem',
     display: 'inline-block',
-    margin: 0,
-  }
+  },
 }
 
 class Home extends React.Component{
@@ -82,7 +81,7 @@ class Home extends React.Component{
    sectionTitle = ( title, headerId ) => {
     const { classes } = this.props
     return(
-    <header className={classes.header} id={headerId}>
+    <header className={classes.subheader} id={headerId}>
       <h1 className={classes.title}>{title}</h1>
     </header>)
   }
@@ -98,7 +97,6 @@ class Home extends React.Component{
         >
           <Grid item xs={12}>
             <Header/>
-            {/*eslint-disable-next-line*/}
             {this.sectionTitle('About Me', 'about')}
           </Grid>
           <Grid className={classes.container} item xs={8}>
@@ -124,6 +122,7 @@ class Home extends React.Component{
                   <Skills
                     skills={frameworks}
                     skillsTitle='Frameworks'
+                    expressLogo={classes.expressLogo}
                   />
                 </div>
                 <div className={classes.masonryBrickRight}>

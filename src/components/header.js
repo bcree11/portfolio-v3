@@ -45,7 +45,7 @@ const styles = theme => ({
 //color: #ffae1a
 
 const Header = ({ classes }) => (
-    <header className={classes.root}>
+    <header  id='home' className={classes.root}>
       <div className={classes.titleContainer}>
         <span className={classes.title}>Web Developer</span>
       </div>
