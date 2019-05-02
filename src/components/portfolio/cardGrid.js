@@ -75,7 +75,7 @@ class CardGrid extends React.Component{
       {id: 6, project: tictactoe},
       {id: 7, project: treasure},
       {id: 8, project: lightSwitch, image: sunAndMoon, onChange: this.SunChange},
-      {id: 9, project: colorBox, colors: colors[colorCounter].code, onChange: this.colorBox},
+      {id: 9, project: colorBox, image: 'noImage', colors: colors[colorCounter].code, onChange: this.colorBox},
     ]
     return(
       <section className={`${classes.root} card-grid`}>

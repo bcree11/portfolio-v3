@@ -14,7 +14,6 @@ export default class App extends React.Component {
       <MuiThemeProvider theme={theme}>
         <Helmet>
           <meta charset="utf-8" />
-          <link rel="stylesheet" href="./App.css" />
         </Helmet>
         <Routes/>
       </MuiThemeProvider>

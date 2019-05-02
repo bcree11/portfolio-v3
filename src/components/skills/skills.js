@@ -32,7 +32,6 @@ const styles = theme => ({
 })
 
 const SkillsTable = (props) => {
-  console.log('express', props.expressLogo);
   return(
     <React.Fragment>
       {props.skills &&

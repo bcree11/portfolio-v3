@@ -52,7 +52,7 @@ const ContactList = (props) => {
           rel="noopener noreferrer"
         >
           <ListItemIcon className={classes.icon}>
-            <i class="zmdi zmdi-linkedin"></i>
+            <i className="zmdi zmdi-linkedin"></i>
           </ListItemIcon>
           <ListItemText disableTypography primary={
             <h6 className={classes.title}>LinkedIn</h6>
@@ -67,7 +67,7 @@ const ContactList = (props) => {
           rel="noopener noreferrer"
         >
           <ListItemIcon className={classes.icon}>
-            <i class="zmdi zmdi-github-alt"></i>
+            <i className="zmdi zmdi-github-alt"></i>
           </ListItemIcon>
           <ListItemText primary={
             <h6 className={classes.title}>Github</h6>
@@ -82,7 +82,7 @@ const ContactList = (props) => {
           rel="noopener noreferrer"
         >
           <ListItemIcon className={classes.icon}>
-            <i class="zmdi zmdi-email"></i>
+            <i className="zmdi zmdi-email"></i>
           </ListItemIcon>
           <ListItemText disableTypography primary={
             <h6 className={classes.title}>Email</h6>

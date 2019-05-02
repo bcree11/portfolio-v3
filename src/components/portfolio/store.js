@@ -13,7 +13,7 @@ export const colorBox = {
                         description: `Color Box was my introduction to React and
                         state changes.`,
                         tech: 'React',
-                        comment: 'Click Image',
+                        comment: 'Click',
                       }
 
 export const lightSwitch = {
@@ -24,7 +24,7 @@ export const lightSwitch = {
                         between parent and child components.`,
                         tech: 'React, GIMP',
                         code: 'https://github.com/bcree11/light-switch-app',
-                        comment: 'Click Image',
+                        comment: 'Click',
                       }
 
 export const treasure = {
