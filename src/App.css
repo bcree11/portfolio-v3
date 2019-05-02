@@ -27,29 +27,63 @@ table.striped>tbody>tr:nth-child(odd) {
 
 @media (max-width: 900px) {
   /* skills */
-  .Home-masonryHome-3 {
+  .masonry-home {
     max-height: none!important;
     margin-left: 3rem!important;
   }
 
-  .Home-masonryCont-2 {
+  .masonry-cont {
     margin-left: 0!important;
   }
 
-  .Home-masonryBrickLeft-4 {
-    margin: 0 0 3rem 0!important;
+  .masonry-brick-left {
+    margin: 0 5vw 3rem 0!important;
+    width: 60vw!important;
+  }
+
+  .masonry-brick-right {
+    margin: 0 5vw 3rem 0!important;
+    width: 60vw!important;
   }
   /* cards */
-  .CardGrid-root-154 {
+  .card-grid {
     grid-template-columns: repeat(2, 20rem)!important;
   }
 
 }
 
 @media (max-width: 700px) {
-  /* cards */
-  .CardGrid-root-154 {
-    grid-template-columns: repeat(1, 20rem)!important;
+  /* skills */
+  .masonry-brick-right {
+    width: 80vw!important;
+    margin: 0 10vw 3rem 0!important;
   }
 
+  .masonry-brick-left {
+    width: 80vw!important;
+    margin: 0 10vw 3rem 0!important;
+  }
+  /* cards */
+  .card-grid {
+    grid-template-columns: repeat(1, 20rem)!important;
+  }
+  .masonry-cont {
+    margin-left: 0!important;
+  }
+
+  /* home */
+  .align-header {
+    text-align: center!important;
+    display: inherit!important;
+  }
+
+  .header-background {
+    background-attachment: scroll!important;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-background{
+    height: calc(100vh - 56px)!important;
+  }
 }

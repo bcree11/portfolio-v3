@@ -42,12 +42,15 @@ const styles = {
     backgroundColor: '#2e8af7',
     padding: '3rem',
     marginBottom: '8rem',
-    paddingTop: '100px',
+    paddingTop: '64px',
     display: 'flex',
     alignItems: 'center',
   },
   title: {
     margin: '0 0 20px',
+    display: 'inline-block',
+  },
+  border: {
     borderBottom: '6px solid black',
     display: 'inline-block',
   },
@@ -81,15 +84,18 @@ class Home extends React.Component{
    sectionTitle = ( title, headerId ) => {
     const { classes } = this.props
     return(
-    <header className={classes.subheader} id={headerId}>
-      <h1 className={classes.title}>{title}</h1>
+    <header className={`${classes.subheader} align-header`} id={headerId}>
+      <div className={classes.border}>
+      <h1 className={`${classes.title} hide-on-small-only`}>{title}</h1>
+      <h3 className={`${classes.title} border-control show-on-small hide-on-med-and-up`}>{title}</h3>
+      </div>
     </header>)
   }
 
   render(){
     const { classes } = this.props
     return(
-      <main>
+      <main id='home'>
         <Grid
           container
           justify="center"
@@ -104,34 +110,34 @@ class Home extends React.Component{
           </Grid>
           <Grid className={classes.container} item xs={12}>
             {this.sectionTitle('Technology', 'skills')}
-            <div className={classes.masonryCont}>
-              <div className={classes.masonryHome}>
-                <div className={classes.masonryBrickLeft}>
+            <div className={`${classes.masonryCont} masonry-cont`}>
+              <div className={`${classes.masonryHome} masonry-home`}>
+                <div className={`${classes.masonryBrickLeft} masonry-brick-left`}>
                   <Skills
                     skills={languages}
                     skillsTitle='Languages'
                   />
                 </div>
-                <div className={classes.masonryBrickLeft}>
+                <div className={`${classes.masonryBrickLeft} masonry-brick-left`}>
                   <Skills
                     skills={otherSkills}
                     skillsTitle='Other Skills'
                   />
                 </div>
-                <div className={classes.masonryBrickRight}>
+                <div className={`${classes.masonryBrickRight} masonry-brick-right`}>
                   <Skills
                     skills={frameworks}
                     skillsTitle='Frameworks'
                     expressLogo={classes.expressLogo}
                   />
                 </div>
-                <div className={classes.masonryBrickRight}>
+                <div className={`${classes.masonryBrickRight} masonry-brick-right`}>
                   <Skills
                     skills={databases}
                     skillsTitle='Databases'
                   />
                 </div>
-                <div className={classes.masonryBrickRight}>
+                <div className={`${classes.masonryBrickRight} masonry-brick-right`}>
                   <Skills
                     skills={testing}
                     skillsTitle='Testing'

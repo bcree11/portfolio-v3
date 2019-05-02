@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '/Users/bcree/Desktop/portfolio-v3/src/App.css'
 import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 import 'materialize-css'
 import 'materialize-css/dist/css/materialize.min.css'
 
@@ -19,13 +19,6 @@ const styles = theme => ({
     textAlign: 'center',
     fontWeight: 'bold'
   },
-  card: {
-    width: 300,
-    marginBottom: '40px'
-  },
-  media: {
-    height: 300,
-  },
   skillsLogos: {
     height: '3rem'
   },
@@ -39,25 +32,26 @@ const styles = theme => ({
 })
 
 const SkillsTable = (props) => {
+  console.log('express', props.expressLogo);
   return(
     <React.Fragment>
       {props.skills &&
         props.skills.map((skill, index) => (
           <tr key={skill.id}>
             <td className={props.skillsTable}>
-              <p>{'{ '}name:</p>
+              <Typography component="p">{'{ '}name:</Typography>
             </td>
             <td className={props.skillsTable}>
-              <h6>{skill.name}</h6>
+              <Typography component="h6">{skill.name}</Typography>
             </td>
             <td className={props.skillsTable}>
-              <p>logo:</p>
+              <Typography component="p">logo:</Typography>
             </td>
-            <td className={`${props.skillsTable} right`}>
-              <img className={props.skillsLogos} src={skill.logo} alt={skill.name}/>
+            <td className={`${props.skillsTable} center`}>
+              <img className={skill.check ? props.expressLogo: props.skillsLogos} src={skill.logo} alt={skill.name}/>
             </td>
             <td className={props.skillsTable}>
-              <p>{' }'} ,</p>
+              <Typography component="p">{' }'} ,</Typography>
             </td>
           </tr>
       ))}
@@ -70,7 +64,7 @@ const Skills = (props) => {
     <section className={classes.root}>
       <Paper className={classes.paper} elevation={6} square={true}>
         <h3 className={classes.title}>{skillsTitle} ={' ['}</h3>
-        <table className={"striped"}>
+        <table className="striped responsive-table">
           <tbody>
             <SkillsTable
               skillsLogos={classes.skillsLogos}

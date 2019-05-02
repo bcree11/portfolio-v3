@@ -5,18 +5,21 @@ import 'materialize-css'
 import 'materialize-css/dist/css/materialize.min.css'
 
 export default (props) => (
-  <div className='navbar-fixed'>
-    <nav>
+  <div class="navbar-fixed" style={navStyle}>
+    <nav style={navStyle}>
       <div className="nav-wrapper black">
-        <Link to="/" className="brand-logo center">{props.title}</Link>
+        <span className="brand-logo center">{props.title}</span>
         <ul id="nav-mobile" className="left hide-on-med-and-down">
-          <li><a href="/#home">Home</a></li>
+          <li><Link to="/">Home</Link></li>
           <li><a href="/#about">About Me</a></li>
           <li><a href="/#skills">Skills</a></li>
           <li><a href="/#portfolio">Portfolio</a></li>
-          <li><a href="/#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
   </div>
 )
+
+const navStyle = {
+  width: '100vw'
+}

@@ -52,6 +52,7 @@ export const frameworks = [
           { id: 5,
             name: "\"Materialize\",",
             logo: "https://seeklogo.com/images/M/materialize-logo-0FCAD8A6F8-seeklogo.com.png",
+            check: true
           },
           { id: 6,
             name: "\"Bootstrap\",",
@@ -67,6 +68,7 @@ export const otherSkills = [
           { id: 2,
             name: "\"Express.js\",",
             logo: "https://seeklogo.com/images/E/express-js-logo-FA36FF1D3F-seeklogo.com.png",
+            check: true
           },
           { id: 3,
             name: "\"Git\",",

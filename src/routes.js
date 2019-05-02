@@ -14,6 +14,7 @@ import Flex from './pages/tech_talk_project/pages/Flex'
 import Grid from './pages/tech_talk_project/pages/Grid'
 import Background from './pages/tech_talk_project/pages/Background'
 import TreasureHunt from './pages/treasure_hunt_project/treasure_hunt'
+import GameBoard from './pages/memory_card_project/game'
 
 export default props => (
   <BrowserRouter>
@@ -26,6 +27,7 @@ export default props => (
         <Route exact path='/tech-talk/grid' component={Grid}/>
         <Route exact path='/tech-talk/background' component={Background}/>
         <Route exact path='/christmas-present-hunt' component={TreasureHunt}/>
+        <Route exact path='/memory-card-game' component={GameBoard}/>
         <Route path='/' component={Home}/>
       </Switch>
     </Layout>

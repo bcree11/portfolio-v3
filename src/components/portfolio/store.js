@@ -4,6 +4,8 @@ import talkImg from './images/responsive.png'
 import portfolioImg from './images/portfolio.png'
 import batterImg from './images/BatterUp.png'
 import chillImg from './images/chill.png'
+import toolImg from './images/toolshare.png'
+import memoryImg from './images/memory.png'
 
 export const colorBox = {
                         date: 'December 2018',
@@ -132,8 +134,8 @@ export const tool = {
                         Devise, Google Maps API, Mailboxer, React-Router,
                         Moment.js`,
                         code: 'https://github.com/team-pacific-drive/ToolShare',
-                        image: '',
-                        link: 'https://devpost.com/software/batter-up-yudmpt',
+                        image: toolImg,
+                        link: 'https://hidden-tundra-14844.herokuapp.com/',
                         linkText: 'Link',
                       }
 
@@ -154,4 +156,18 @@ export const discrete = {
                         code: 'More information upon request',
                         image: chillImg,
                         imageSize: 'contain',
+                      }
+
+export const memory = {
+                        date: 'April 2019',
+                        title: 'Memory Card Game',
+                        description: `Memory card game I created for a coding
+                        challenge. It calls on an API, 'Deck of Cards', turns
+                        that data into JSON, and then fetches that data to
+                        display on the page as cards.`,
+                        tech: 'React',
+                        code: 'https://github.com/bcree11/concentration-card-game',
+                        image: memoryImg,
+                        link: '/memory-card-game',
+                        linkText: 'Play',
                       }
