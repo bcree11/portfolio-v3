@@ -5,6 +5,7 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
+import resume from '../resume.pdf'
 
 const styles = theme => ({
   root: {
@@ -86,6 +87,21 @@ const ContactList = (props) => {
           </ListItemIcon>
           <ListItemText disableTypography primary={
             <h6 className={classes.title}>Email</h6>
+            }
+          />
+        </ListItem>
+        <ListItem
+          button
+          component='a'
+          href={resume}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ListItemIcon className={classes.icon}>
+            <i className="zmdi zmdi-file-text"></i>
+          </ListItemIcon>
+          <ListItemText disableTypography primary={
+            <h6 className={classes.title}>Resume</h6>
             }
           />
         </ListItem>
