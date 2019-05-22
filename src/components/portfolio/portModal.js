@@ -8,11 +8,14 @@ import Button from '@material-ui/core/Button'
 const styles = theme => ({
   paper: {
     position: 'absolute',
-    // width: theme.spacing.unit * 75,
+    width: '80%',
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
-    padding: theme.spacing.unit * 4,
+    padding: '32px 32px 10px',
     outline: 'none',
+  },
+  scroll: {
+    overflow: 'auto',
   },
   button: {
     margin: theme.spacing.unit,
@@ -25,7 +28,7 @@ const styles = theme => ({
       },
   },
   modalTitle: {
-    margin: '0 0 20px 0',
+    margin: '0 0 20px',
   },
   titles: {
     borderBottom: '2px solid black',
@@ -39,9 +42,10 @@ const styles = theme => ({
 
 function getModalStyle() {
   return {
-    top: '50%',
     left: '50%',
-    transform: 'translate(-50%, -50%)',
+    transform: 'translate(-50%)',
+    margin: '64px 0',
+    overflow: 'auto',
   }
 }
 
@@ -100,12 +104,13 @@ class PortModal extends React.Component {
           aria-describedby={`${card_info.title}-description`}
           open={this.state.open}
           onClose={this.handleClose}
+          className={classes.scroll}
         >
           <div style={getModalStyle()} className={classes.paper}>
             <Typography className={classes.modalTitle} variant="h4" id={`${card_info.title}`}>
               {title}
             </Typography>
-            <Typography className={classes.projectDescription} id={`${card_info.title}-description`}>
+            <div className={classes.projectDescription} id={`${card_info.title}-description`}>
               <div>
                 <h6 className={classes.titles}>Date</h6>
                 <div>{card_info.date}</div>
@@ -125,7 +130,10 @@ class PortModal extends React.Component {
                   {source_code}
                 </div>
               </div>
-            </Typography>
+            </div>
+            <Button onClick={this.handleClose} className={classes.button} color='primary'>
+              Close
+            </Button>
           </div>
         </Modal>
       </div>
