@@ -16,7 +16,6 @@ const styles = theme => ({
   list: {
     width: '100%',
     maxWidth: 175,
-    marginBottom: 40,
   },
   hrefLink: {
     color: 'inherit',

@@ -13,7 +13,6 @@ import PortModal from './portModal'
 
 const styles = {
   card: {
-    maxWidth: 300,
   },
   media: {
     height: 300,
@@ -94,7 +93,7 @@ const PortCard = (props) => {
     }
   }
   return (
-    <Card className={classes.card} elevation={6} square={true}>
+    <Card className={`${classes.card} card-width`} elevation={6} square={true}>
       {CardArea()}
       <CardActions>
         <PortModal

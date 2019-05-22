@@ -65,8 +65,14 @@ table.striped>tbody>tr:nth-child(odd) {
   }
   /* cards */
   .card-grid {
-    grid-template-columns: repeat(1, 20rem)!important;
+    grid-template-columns: repeat(1, 80vw)!important;
   }
+
+  .card-width {
+    max-width: none;
+    width: 80vw;
+  }
+
   .masonry-cont {
     margin-left: 0!important;
   }
@@ -79,7 +85,13 @@ table.striped>tbody>tr:nth-child(odd) {
 
   .header-background {
     background-attachment: scroll!important;
+}
+
+  /* about */
+  .about-text {
+    width: 80vw;
   }
+
 }
 
 @media (max-width: 600px) {

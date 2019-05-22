@@ -48,20 +48,6 @@ const AboutMe = (props) => {
         </Card>
       </div>
       <ContactList/>
-      <div>
-        <Paper className={classes.paper} elevation={6} square={true}>
-          <h3>Who Am I?</h3>
-          <p className={`${classes.describeMe} text flow-text`}>
-            Hi, my name is Brandon Cree. After 5 years in sales I decided it
-            was time for a career change and joined the tech industry. I am
-            passionate about learning new things and enjoy taking up new
-            challenges, so, web development has been a natural transition. I
-            am a highly motivated individual with strong analytical skills
-            looking for new opportunities and people to connect with, so feel
-            free to contact me.
-          </p>
-        </Paper>
-      </div>
     </section>
   )
 }
