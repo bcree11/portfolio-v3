@@ -127,7 +127,7 @@ class Home extends React.Component{
                 <div className={`${classes.masonryBrickRight} masonry-brick-right`}>
                   <Skills
                     skills={frameworks}
-                    skillsTitle='Frameworks'
+                    skillsTitle='Frameworks & Libraries'
                     expressLogo={classes.expressLogo}
                   />
                 </div>
