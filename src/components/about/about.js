@@ -5,7 +5,8 @@ import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
 
 import ContactList from './contact'
-import mypic from '../images/BrandonCree.png'
+import AboutMyPics from './aboutMyPics'
+import mypic from './images/BrandonCree.png'
 
 const styles = theme => ({
   root: {
@@ -23,8 +24,12 @@ const styles = theme => ({
   describeMe: {
     backgroundColor: 'rgba(0,0,0,.07)',
     marginBottom: 0,
-    padding: '10px',
+    padding: 10,
     textAlign: 'left',
+  },
+  pics: {
+    marginTop: 100,
+    width: 680
   }
 })
 
@@ -43,6 +48,9 @@ const AboutMe = (props) => {
         </Card>
       </div>
       <ContactList/>
+      <div className={`${classes.pics} pic-slider`}>
+        <AboutMyPics/>
+      </div>
     </section>
   )
 }

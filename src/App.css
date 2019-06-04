@@ -7,8 +7,8 @@ body, p {
 }
 
 span, a, h1, h2, h3, h4, h5, h6 {
- font-family: 'Oswald', sans-serif;
- text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
 nav > div > .brand-logo {
@@ -23,6 +23,10 @@ nav > div > ul > li > a {
 
 table.striped>tbody>tr:nth-child(odd) {
     background-color: rgba(0,0,0,.07)!important;
+}
+
+.indicator-item.active {
+  background-color: #ffae1a!important;
 }
 
 @media (max-width: 900px) {
@@ -91,11 +95,16 @@ table.striped>tbody>tr:nth-child(odd) {
   .about-text {
     width: 80vw;
   }
-
+  .pic-slider {
+    width: 90vw!important;
+  }
+  .hide-caption {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
-  .header-background{
+  .header-background {
     height: calc(100vh - 56px)!important;
   }
 }

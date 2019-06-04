@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import { withStyles } from '@material-ui/core/styles'
 
 import Header from '../components/header'
-import AboutMe from '../components/about'
+import AboutMe from '../components/about/about'
 import CardGrid from '../components/portfolio/cardGrid'
 import Skills from '../components/skills/skills.js'
 
