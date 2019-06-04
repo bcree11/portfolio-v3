@@ -15,6 +15,7 @@ import {
   tool,
   discrete,
   memory,
+  rqt,
 } from './store'
 
 import PortCard from './card'
@@ -66,16 +67,17 @@ class CardGrid extends React.Component{
     const { classes } = this.props
     const { colorCounter, colors, sunAndMoon } = this.state
     const portfolio_cards = [
-      {id: 0, project: discrete},
-      {id: 1, project: tool},
-      {id: 2, project: memory},
-      {id: 3, project: batter},
-      {id: 4, project: portfolio},
-      {id: 5, project: tech_talk},
-      {id: 6, project: tictactoe},
-      {id: 7, project: treasure},
-      {id: 8, project: lightSwitch, image: sunAndMoon, onChange: this.SunChange},
-      {id: 9, project: colorBox, image: 'noImage', colors: colors[colorCounter].code, onChange: this.colorBox},
+      {id: 0, project: rqt},
+      {id: 1, project: discrete},
+      {id: 2, project: tool},
+      {id: 3, project: memory},
+      {id: 4, project: batter},
+      {id: 5, project: portfolio},
+      {id: 6, project: tech_talk},
+      {id: 7, project: tictactoe},
+      {id: 8, project: treasure},
+      {id: 9, project: lightSwitch, image: sunAndMoon, onChange: this.SunChange},
+      {id: 10, project: colorBox, image: 'noImage', colors: colors[colorCounter].code, onChange: this.colorBox},
     ]
     return(
       <section className={`${classes.root} card-grid`}>

@@ -44,6 +44,7 @@ const PortCard = (props) => {
       variant="text"
       onChange={props.resetLightSwitch}
       color='primary'
+      target="_blank"
     >
       {card_info.linkText}
     </Button> : null

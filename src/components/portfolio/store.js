@@ -6,6 +6,7 @@ import batterImg from './images/BatterUp.png'
 import chillImg from './images/chill.png'
 import toolImg from './images/toolshare.png'
 import memoryImg from './images/memory.png'
+import rqtImg from './images/rqt.png'
 
 export const colorBox = {
                         date: 'December 2018',
@@ -170,4 +171,19 @@ export const memory = {
                         image: memoryImg,
                         link: '/memory-card-game',
                         linkText: 'Play',
+                      }
+
+export const rqt = {
+                        date: 'May 2019',
+                        title: 'react-quick-template',
+                        description: `Built and published this CLI to the npm
+                        Registry (react-quick-template). It instantly generates
+                        a new file with React component templates. It can also
+                        produce directories and sub-directories. This package
+                        was created using Node.js and oclif.`,
+                        tech: `Node.js, oclif`,
+                        code: 'https://github.com/bcree11/react-template-cli',
+                        image: rqtImg,
+                        link: 'https://www.npmjs.com/package/react-quick-template',
+                        linkText: 'Link',
                       }

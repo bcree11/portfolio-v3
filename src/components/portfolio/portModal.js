@@ -86,11 +86,26 @@ class PortModal extends React.Component {
     const source_code = card_info.title === 'Portfolio' ?
       <React.Fragment>
         {card_info.code.map((code, index) =>
-          <Button className={classes.button} color='primary' href={code.version} key={code.id}>V{code.id}</Button>
+          <Button
+            className={classes.button}
+            color='primary'
+            href={code.version}
+            key={code.id}
+            target="_blank"
+          >
+            V{code.id}
+          </Button>
         )}
         {' '}
       </React.Fragment> :
-      <Button className={classes.button} color='primary' href={card_info.code}>Link</Button>
+      <Button
+        className={classes.button}
+        color='primary'
+        href={card_info.code}
+        target="_blank"
+      >
+        Link
+      </Button>
     const title = card_info.title === 'Tech Talk' ?
       'Tech Talk: Responsive Design' : card_info.title
 
