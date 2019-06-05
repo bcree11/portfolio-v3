@@ -22,7 +22,7 @@ const styles = theme => ({
     left: '20%',
     bottom: '5%',
     position: 'absolute',
-    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
 
   },
   sfColor: {

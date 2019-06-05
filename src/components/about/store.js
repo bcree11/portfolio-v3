@@ -12,7 +12,7 @@ export const myImages = [
         },
         { image: praiano,
           bigCaption: 'Praiano, Italy',
-          smallCaption: false,
+          smallCaption: 'Amalfi Coast',
         },
         { image: rome,
           bigCaption: 'The Colosseum',

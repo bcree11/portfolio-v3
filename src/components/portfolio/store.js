@@ -7,6 +7,7 @@ import chillImg from './images/chill.png'
 import toolImg from './images/toolshare.png'
 import memoryImg from './images/memory.png'
 import rqtImg from './images/rqt.png'
+import ncaaImg from './images/ncaa.png'
 
 export const colorBox = {
                         date: 'December 2018',
@@ -98,14 +99,14 @@ export const portfolio = {
 export const batter = {
                         date: 'March 2019',
                         title: 'Batter Up!',
-                        description: `Baseball Hack Day 2019 San Diego 2nd
-                        Place Winner. See Devpost link below for more details.`,
+                        description: `Baseball Hack Day 2019 San Diego 1st
+                        Runner-Up. See Devpost link below for more details.`,
                         tech: 'React, Python',
                         code: 'https://devpost.com/software/batter-up-yudmpt',
                         image: batterImg,
                         link: 'https://devpost.com/software/batter-up-yudmpt',
                         linkText: 'Devpost',
-                        comment: 'Baseball Hack Day 2019 San Diego 2nd Place Winner'
+                        comment: 'Baseball Hack Day 2019 San Diego 1st Runner-Up'
                       }
 
 export const tool = {
@@ -175,7 +176,7 @@ export const memory = {
 
 export const rqt = {
                         date: 'May 2019',
-                        title: 'react-quick-template',
+                        title: 'react-quick-template CLI',
                         description: `Built and published this CLI to the npm
                         Registry (react-quick-template). It instantly generates
                         a new file with React component templates. It can also
@@ -186,4 +187,19 @@ export const rqt = {
                         image: rqtImg,
                         link: 'https://www.npmjs.com/package/react-quick-template',
                         linkText: 'Link',
+                      }
+export const terps = {
+                        date: 'May 2019',
+                        title: 'NCAA Schedule CLI',
+                        description: `Retrieves team schedule data from an API
+                        for both NCAAF and NCAAB and outputs them in a table
+                        that's printed in the terminal. The default team is
+                        Maryland but you can use a flag to find data on any
+                        team, e.g. 'terps(./bin/run) football -t "Michigan
+                        Wolverines"' for Michigan's football schedule and
+                        'terps(./bin/run) basketball -t UK' for Kentucky's
+                        basketball schedule.`,
+                        tech: `Node.js, oclif, axios`,
+                        code: 'https://github.com/bcree11/terps-sports-cli',
+                        image: ncaaImg,
                       }
