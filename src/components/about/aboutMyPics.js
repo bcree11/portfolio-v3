@@ -38,7 +38,7 @@ const AboutMyPics = (props) => {
   return (
     <Slider className={classes.test}>
     {myImages.map((image, index) =>
-      <Slide image={<img className={classes.sliderPics} src={image.image} alt={image.bigCaption}/>}>
+      <Slide key={image.id} image={<img className={classes.sliderPics} src={image.image} alt={image.bigCaption}/>}>
         <Paper className={`${classes.caption} hide-caption center-align`}>
           <h3 className={classes.capMargin}>{image.bigCaption}</h3>
           {!image.pch && image.smallCaption && <h5 className='black-text'>{image.smallCaption}</h5>}
