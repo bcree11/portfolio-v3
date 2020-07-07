@@ -101,6 +101,6 @@ export const testing = [
           },
           { id: 2,
             name: "\"RSPEC\",",
-            logo: "http://rspec.info/images/logo_ogp.png",
+            logo: "https://rspec.info/images/logo_ogp.png",
           },
         ]
