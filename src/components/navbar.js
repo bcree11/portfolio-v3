@@ -13,6 +13,14 @@ const styles = {
   navStyle: {
     width: '100vw',
     userSelect: 'none'
+  },
+  navLinks: {
+    '& li:hover': {
+      backgroundColor: '#ffae1a',
+      '& a': {
+        color: 'black!important'
+      }
+    },
   }
 }
 
@@ -23,7 +31,7 @@ const NavBar = (props) => {
       <nav className={classes.navStyle}>
         <div className="nav-wrapper black">
           <span className="brand-logo center">{props.title}</span>
-          <ul id="nav-mobile" className="left hide-on-med-and-down">
+          <ul id="nav-mobile" className={`left hide-on-med-and-down ${classes.navLinks}`}>
             <li><NavLink to="/" activeClassName={classes.disable} exact>Home</NavLink></li>
             <li><a href="/#about">About Me</a></li>
             <li><a href="/#skills">Skills</a></li>

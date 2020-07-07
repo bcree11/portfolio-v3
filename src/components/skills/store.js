@@ -9,7 +9,7 @@ export const languages = [
             },
             { id: 3,
               name: "\"Ruby\",",
-              logo: "https://seeklogo.com/images/R/ruby-logo-087AF79367-seeklogo.com.jpg",
+              logo: "https://cdn0.iconfinder.com/data/icons/long-shadow-web-icons/512/ruby-256.png",
             },
             { id: 4,
               name: "\"CSS\",",
@@ -24,7 +24,7 @@ export const languages = [
 export const databases = [
           { id: 1,
             name: "\"SQL\",",
-            logo: "http://www.logospng.com/images/44/sql-amp-mysql-education-training-blazing-softech-pvt-ltd-44396.png",
+            logo: "https://cdn1.iconfinder.com/data/icons/hawcons/32/699251-icon-24-file-sql-128.png",
           },
         ]
 
@@ -39,7 +39,7 @@ export const frameworks = [
           },
           { id: 3,
             name: "\"Rails\",",
-            logo: "https://dcresource.biz/wp-content/uploads/2016/03/ruby_on_rails.png",
+            logo: "https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/ruby-on-rails-256.png",
           },
           { id: 4,
             name: "\"Express.js\",",
@@ -91,10 +91,6 @@ export const otherSkills = [
           { id: 6,
             name: "\"Photoshop\",",
             logo: "https://seeklogo.com/images/A/adobe-photoshop-cc-logo-CBD0AAA3A7-seeklogo.com.png",
-          },
-          { id: 7,
-            name: "\"GIMP\",",
-            logo: "https://seeklogo.com/images/G/gimp-logo-4D0E1F6FF5-seeklogo.com.jpg",
           },
         ]
 

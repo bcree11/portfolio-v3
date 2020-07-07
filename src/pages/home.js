@@ -18,7 +18,8 @@ import {
 
 const styles = {
   container: {
-    marginBottom: '8rem'
+    marginBottom: '8rem',
+    paddingTop: '3rem'
   },
   masonryCont: {
     display: 'flex',
@@ -101,10 +102,6 @@ class Home extends React.Component{
           justify="center"
           style={{backgroundColor: this.state.backgroundColor}}
         >
-          <Grid item xs={12}>
-            <Header/>
-            {this.sectionTitle('About Me', 'about')}
-          </Grid>
           <Grid className={classes.container} item xs={8}>
             <AboutMe/>
           </Grid>
